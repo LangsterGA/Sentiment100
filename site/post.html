@@ -1,127 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Sentiment 100</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <!-- <a class="navbar-brand" href="index.html">Start Bootstrap</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a></li> -->
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Sentiment 100</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <!-- <a class="navbar-brand" href="index.html">Start Bootstrap</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a></li> -->
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                </ul>
             </div>
-        </nav>
-        <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/president.jpg')">
-            <div class="container position-relative px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="post-heading">
-                            <h1>Sentiment analysis of the first 100 days of presidency for Donald Trump and Joe Biden</h1>
-                            <h2 class="subheading">Deep dive into sentiment of Tweets by each president</h2>
-                            <span class="meta">
-                                Posted by
-                                <a href="#!">Amy Louise Lang</a>
-                                on June 5, 2021
-                            </span>
-                        </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('assets/img/president.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>Sentiment analysis of the first 100 days of presidency for Donald Trump and Joe Biden</h1>
+                        <h2 class="subheading">Deep dive into sentiment of Tweets by each president</h2>
+                        <span class="meta">
+                            Posted by
+                            <a href="#!">Amy Louise Lang</a>
+                            on June 5, 2021
+                        </span>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- Post Content-->
-        <article class="mb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
-                        <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
-                        <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
-                        <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
-                        <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-                        <h2 class="section-heading">The Final Frontier</h2>
-                        <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-                        <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-                        <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-                        <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-                        <h2 class="section-heading">Reaching for the Stars</h2>
-                        <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-                        <a href="#!"><img class="img-fluid" src="assets/img/post-sample-image.jpg" alt="..." /></a>
-                        <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-                        <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-                        <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-                        <p>
-                            <!-- Placeholder text by
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <class class="col-md-10 col-lg-8 col-xl-7">
+                    <p>In the United States of America, the first 100 days of a presidential term has symbolic
+                        significance.
+                        This is when a president's specific priorities are defined and parlayed. It is also considered
+                        an early
+                        indicator to measure their success.</p>
+                    <p>The term was originally coined in 1933 by Franklin Delano Roosevelt when he passed 76 laws during
+                        his first 100 days.
+                        While we won't be looking at their accomplishments during this time, we will consider the
+                        messaging of each
+                        politician. We want to explore the tone of each politician during this important period, also
+                        known as the "honeymoon"
+                        period of a presidency.
+                        To do this, we will take a look at the Tweets made during the first 100 days for each politician
+                        to see how objective and postive each president
+                        was. </p>
+                    <p>With the help of Natural Language Processing (NLP) techniques, we will explore Twitter data using
+                        textual
+                        featurization, sentiment analysis and word cloud visualizations.
+                    </p>
+                    <p>The following work employs data from Kaggle, as well as data collected from Twitter using Tweepy.
+                        Tweepy is a Python library that allows you to access the Twitter API with a Twitter Developer
+                        account
+                        and access credentials. The data for Donald Trump is a dataset shared on Kaggle and includes all
+                        of his Tweets
+                        prior to his account being frozen. The data for Joe Biden was accessed via the Twitter API. Data
+                        were cleaned
+                        and formatted for analysis using various Python libraries (detailed in Notebooks). Data and Jupyter Notebooks used for
+                        the analysis are accessible
+                        via the Github link at the bottom of this page.</p>
+
+                    <h2 class="section-heading">Exploratory Data Analysis</h2>
+                    <p>The main purpose of exploratory data analysis is to better understand the data, look for any
+                        patterns,
+                        find interesting relationships among the different variables and brainstorm questions about it.
+                    </p>
+                    <p>Data for each candidate was cleaned and analysed using Python and associated libraries in Jupyter
+                        notebooks.
+                        Tweets for the first 100 days were
+                        queried for each candidate. January 20-April 30, 2017 for Donald Trump and January 20-April 30,
+                        2021, for
+                        Joe Biden.
+                    </p>
+                    <p>As a first step, we look at some statistics of the tweets for each politician. The data below are snapshots
+                        of the results of the Pandas built-in function df.describe() for the numerical fields in the datasets.
+                    </p>
+                    <!-- </class> -->
+                    <a href="#!"><img class="img-fluid" src="assets/img/describe.png" alt="..." /></a>
+                    <blockquote class="blockquote">I guess not so surprisingly, Donald Trump's number of tweets in the first 100 days (520) 
+                        is significantly greater than that of Joe Biden (183).</blockquote>
+                    <p>[INSERT STATEMENT ABOUT IMPORTANCE OF A RETWEET.] Let's review the top 10 most re-tweeted tweets for each.</p>
+                    <a href="#!"><img class="img-fluid" src="assets/img/BidenRetweets.png" alt="..." /></a>
+                    <blockquote class="blockquote">Insert analysis of Joe Biden Retweets.....</blockquote>
+                    <a href="#!"><img class="img-fluid" src="assets/img/TrumpRetweets.PNG" alt="..." /></a>
+                    <blockquote class="blockquote">Insert analysis of Donald Trump Retweets.....</blockquote>
+                    <p>[INSERT STATEMENT ABOUT IMPORTANCE OF A FAVORITED TWEET.]Let's review the top 10 most favorited tweets for each.</p>
+                    <a href="#!"><img class="img-fluid" src="assets/img/BidenFavorites.png" alt="..." /></a>
+                    <blockquote class="blockquote">Insert analysis of Joe Biden's most favorited tweets.....</blockquote>
+                    <a href="#!"><img class="img-fluid" src="assets/img/TrumpFavorites.png" alt="..." /></a>
+                    <blockquote class="blockquote">Insert analysis of Donald Trump's most favorited tweets.....</blockquote>
+                    <p>Let's review the devices used by each candidate for Tweeting.</p>
+                    <a href="#!"><img class="img-fluid" src="assets/img/Biden_devices.PNG" alt="..." /></a>
+                    <blockquote class="blockquote">Insert analysis of Joe Biden's devices.....</blockquote>
+                    <a href="#!"><img class="img-fluid" src="assets/img/Trump_devices.PNG" alt="..." /></a>
+                    <blockquote class="blockquote">Insert analysis of Donald Trump's devices.....</blockquote>
+                    <p>[insert comments about the use of iPhones for tweeting. Trump's tweets are primarily done on either his iPhone or his Android 
+                        whereas Biden has many of his coming from a web app which may indicate someone else (communications staff) may be tweeting from 
+                        the account.
+                        Insert info about the fact that Biden has more social media 
+                        platforms tied to his Twitter account ].</p>
+                    <h2 class="section-heading">TextBlob Sentiment Analysis</h2>
+                    <p>Next we will process the data further by engaging TextBlob, a Python library that provides an API for many common natural 
+                        language processing (NLP) tasks including sentiment analysis. [INSERT explanation of values of subjectivity and polarity 
+                        histograms.]</p>
+                    <a href="#!"><img class="img-fluid" src="assets/img/Polarity_hist.png" alt="..." /></a>
+                    <!-- <span class="caption text-muted">To go places and do things that have never been done before – -->
+                        <!-- that’s what living is all about.</span> -->
+                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year
+                        mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go
+                        where no man has gone before.</p>
+                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a
+                        fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+                    <p>
+                    <h2 class="section-heading">Time Series Analysis</h2>
+                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the
+                        size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked
+                        so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart.
+                        Seeing this has to change a man.</p>
+                    <a href="#!"><img class="img-fluid" src="assets/img/post-sample-image.jpg" alt="..." /></a>
+                    <span class="caption text-muted">To go places and do things that have never been done before –
+                        that’s what living is all about.</span>
+                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year
+                        mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go
+                        where no man has gone before.</p>
+                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a
+                        fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+                    <p>
+                    <h2 class="section-heading">Word Cloud Visualizations</h2>
+                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the
+                        size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked
+                        so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart.
+                        Seeing this has to change a man.</p>
+                    <a href="#!"><img class="img-fluid" src="assets/img/post-sample-image.jpg" alt="..." /></a>
+                    <span class="caption text-muted">To go places and do things that have never been done before –
+                        that’s what living is all about.</span>
+                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year
+                        mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go
+                        where no man has gone before.</p>
+                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a
+                        fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+                    <p>
+                        <!-- Placeholder text by
                             <a href="http://spaceipsum.com/">Space Ipsum</a> -->
-                            Header Image by
-                            <a href="https://www.pennlive.com/news/2020/10/trump-shows-different-side-biden-gets-more-time-to-talk-neither-lands-knockout-pa-debate-analysts.html">Pennlive</a>
-                        </p>
-                    </div>
+                        Header Image by
+                        <a
+                            href="https://www.pennlive.com/news/2020/10/trump-shows-different-side-biden-gets-more-time-to-talk-neither-lands-knockout-pa-debate-analysts.html">Pennlive</a>
+                    </p>
                 </div>
             </div>
-        </article>
-        <!-- Footer-->
-        <footer class="border-top">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Amy Lousie Lang 2021</div>
-                    </div>
+        </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; Amy Lousie Lang 2021</div>
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
