@@ -1,2 +1,2 @@
-# Sentiment100
-Sentiment analysis of the first 100 days of presidency
+# Sentiment Analysis
+First 100 days: a comparison of Donald Trump and Joe Biden
