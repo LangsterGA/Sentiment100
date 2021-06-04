@@ -70,14 +70,14 @@
                         indicator to measure their success.</p>
                     <p>The term was originally coined in 1933 by Franklin Delano Roosevelt when he passed 76 laws during
                         his first 100 days.
-                        While we won't be looking at their accomplishments during this time, we will consider the
+                        While comparing their accomplishments during this time is beyond the scope of this article, we will consider the
                         messaging of each
                         politician. We want to explore the tone of each politician during this important period, also
                         known as the "honeymoon"
                         period of a presidency.
                         To do this, we will take a look at the Tweets made during the first 100 days for each politician
                         to see how objective and postive each president
-                        was. </p>
+                        was and what messsages resonated with their followers.</p>
                     <p>With the help of Natural Language Processing (NLP) techniques, we will explore Twitter data using
                         textual
                         featurization, sentiment analysis and word cloud visualizations.
@@ -89,7 +89,8 @@
                         of his Tweets
                         prior to his account being frozen. The data for Joe Biden was accessed via the Twitter API. Data
                         were cleaned
-                        and formatted for analysis using various Python libraries (detailed in Notebooks). Data and Jupyter Notebooks used for
+                        and formatted for analysis using various Python libraries (detailed in Notebooks). Data and
+                        Jupyter Notebooks used for
                         the analysis are accessible
                         via the Github link at the bottom of this page.</p>
 
@@ -105,26 +106,46 @@
                         2021, for
                         Joe Biden.
                     </p>
-                    <p>As a first step, we look at some statistics of the tweets for each politician. The data below are snapshots
-                        of the results of the Pandas built-in function df.describe() for the numerical fields in the datasets.
+                    <p>As a first step, we look at some statistics of the tweets for each politician. The data below are
+                        snapshots
+                        of the results of the Pandas built-in function df.describe() for the numerical fields in the
+                        datasets.
                     </p>
                     <!-- </class> -->
                     <a href="#!"><img class="img-fluid" src="assets/img/describe.png" alt="..." /></a>
-                    <blockquote class="blockquote">I guess not so surprisingly, Donald Trump's number of tweets in the first 100 days (520) 
+                    <blockquote class="blockquote">I guess not so surprisingly, Donald Trump's number of tweets in the
+                        first 100 days (520)
                         is significantly greater than that of Joe Biden (183).</blockquote>
-                    <p>When users retweet a tweet they amplify the message of it. It can also help develop the 
+                    <p>When users retweet a tweet they amplify the message of it. It can also help develop the
                         followers of the original tweeter. Let's review the top 10 most re-tweeted tweets for each.</p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/BidenRetweets.png" alt="..." /></a>
-                    <p>Most of Biden's top retweets are focused on getting started in office. They also addresses wearing masks and 
+                        <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/BidenRetweets.png" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>Most of Biden's top retweets are focused on getting started in office and the inauguration. They also address
+                        wearing masks and
                         rejoining the Paris Climate agreement.</p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/TrumpRetweets.PNG" alt="..." /></a>
+                        <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/TrumpRetweets.PNG" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p> Trump's most retweeted tweet was that peaceful protests are a hallmark of democracy. Interestingly,
+                        his second most retweeted tweet was about the Patriots' comeback win.
+                    </p>
                     <!-- <blockquote class="blockquote">Insert analysis of Donald Trump Retweets.....</blockquote> -->
-                    <p>When users 'favorite' a tweet, they are showing appreciation for it. The more favorites a tweet has, the more
-                        we know it is adding value to social media content. Let's review the top 10 most favorited tweets for each.</p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/BidenFavorites.png" alt="..." /></a>
-                    <p>Biden's most retweeted tweet is also his most liked. His readers are most supportive of the tweet 
+                    <p>When users 'favorite' a tweet, they are showing appreciation for it. The more favorites a tweet
+                        has, the more
+                        we know it is adding value to social media content. Let's review the top 10 most favorited
+                        tweets for each.</p>
+                        <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/BidenFavorites.png" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>Biden's most retweeted tweet is also his most liked or favorited. His readers are most supportive of the tweet
                         "It's a new day in America".</p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/TrumpFavorites.png" alt="..." /></a>
+                        <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/TrumpFavorites.png" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>Trump's followers also liked his statements related to inauguration and statements about the people gaining
+                        control again.
+                    </p>
                     <!-- <blockquote class="blockquote">Insert analysis of Donald Trump's most favorited tweets.....</blockquote> -->
                     <!-- <p>Let's review the devices used by each candidate for Tweeting.</p>
                     <a href="#!"><img class="img-fluid" src="assets/img/Biden_devices.PNG" alt="..." /></a>
@@ -137,40 +158,65 @@
                         Insert info about the fact that Biden has more social media 
                         platforms tied to his Twitter account ].</p> -->
                     <h2 class="section-heading">TextBlob Sentiment Analysis</h2>
-                    <p>Next, we processed the data further by utilizing TextBlob, a Python library that provides an API for many common natural 
+                    <p>Next, we processed the data further by utilizing TextBlob, a Python library that provides an API
+                        for many common natural
                         language processing (NLP) tasks including sentiment analysis. </p>
-                    <p>TextBlob’s sentiment analysis processing employs two key metrics: 
-                        polarity and subjectivity. The polarity score is a float within the range [-1.0, 1.0], and it reflects the emotional charge of a 
-                        statement or passage. Subjectivity is a float within the range [0.0, 1.0], where 0.0 is very objective and 1.0 is very subjective.</p>
+                    <p>TextBlob’s sentiment analysis processing employs two key metrics:
+                        polarity and subjectivity. The polarity score is a float within the range [-1.0, 1.0], and it
+                        reflects the emotional charge of a
+                        statement or passage. Subjectivity is a float within the range [0.0, 1.0], where 0.0 is very
+                        objective and 1.0 is very subjective.</p>
                     <p>The following are the polarity scores for each president based on their respecive tweets.</p>
-                        <a href="#!"><img class="img-fluid" src="assets/img/Polarity_hist.png" alt="..." /></a>
+                    <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/Polarity_hist.png" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
                     <!-- <span class="caption text-muted">To go places and do things that have never been done before – -->
-                        <!-- that’s what living is all about.</span> -->
-                    <p> Looking at the polarity score, for the most part both candidates remained neutral on the majority of their tweets. Trump's range is greater but 
-                        that is expected as he tweeted significantly more than Biden.</p>
-                        <p>Another way to classify text is to determine the objectivity or subjectivity of it.
-                            If text is objective, it is considered factual and not someone's personal opinion. 
-                            Subjective sentences generally refer to personal opinion, emotion, or judgment. </p>
-                        <p>The following are the subjectivity scores for each president based on their respecive tweets.</p>
-                        <a href="#!"><img class="img-fluid" src="assets/img/Subjectivity_hist.png" alt="..." /></a>
-                        <p> As you can see in this histogram, Biden's tweets fall mostly below 0.6 and on the objective end 
-                            of the spectrum. Trump, on the other hand is across the board with a large portion centered midway along 
-                            the continuum of objectivity/subjectivity.</p>
-                        <p>Let's inspect tweets by looking at them sorted by positive polarity and showing the top 5 rows.</p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/Biden_pos_polar.PNG" alt="..." /></a>
-                    <p>Biden's tweets have well wishes to the public for two holidays and he shares the good news around vaccines.</p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/Trump_pos_polar.PNG" alt="..." /></a>
-                    <p>Trump's most positive tweets include mentions of Justin Trudeau and a nod to the heroes of Medal of Honor Day.</p>
-                    <p>Let's take another look at them showing the top 5 most negatively charged tweets by politician.</p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/Biden_neg_polar.PNG" alt="..." /></a>
-                    <p>Biden's tweets reflect a tough time in America especially around race relations. His tweets comment on Daunte Wright
-                        and the Derek Chauvin murder trial - the police officer found guilty of murdering George Floyd. While
-                    these messages are called out as negative, the sentiment is clearly positive from Joe Biden. </p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/Trump_neg_polar.PNG" alt="..." /></a>
-                    <p>Trump is concerned with FBI leaks and accuses former President Obama of wire tapping. He promotes
-                        fear-mongering by the statement "we must keep evil out of our country" and the idea that vicious 
-                        prisoners have been released by Obama.</p>
-                        <!-- <p>Another way to classify text is to determine the objectivity or subjectivity of it.
+                    <!-- that’s what living is all about.</span> -->
+                    <p> Looking at the polarity score, for the most part both candidates remained neutral on the
+                        majority of their tweets. Trump's range is greater as he tweeted significantly more than Biden 
+                        and he has more in the negative direction beyond that of Biden but he also has some that are more positive.</p>
+                    <p>Another way to classify text is to determine the objectivity or subjectivity of it.
+                        If text is objective, it is considered factual and not someone's personal opinion.
+                        Subjective sentences generally refer to personal opinion, emotion, or judgment. </p>
+                    <p>The following are the subjectivity scores for each president based on their respecive tweets.</p>
+                    <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/Subjectivity_hist.png" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p> As you can see in this histogram, Biden's tweets fall mostly below 0.6 and on the objective end
+                        of the spectrum. Trump, on the other hand is across the board with a large portion centered
+                        midway along
+                        the continuum of objectivity/subjectivity with many more tweets considered subjective rather than factual and objective.</p>
+                    <p>Let's inspect tweets by looking at them sorted by positive polarity and showing the top 5 rows.
+                    </p>
+                    <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/Biden_pos_polar.PNG" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>Biden's tweets have well wishes to the public for two holidays and he shares the good news around
+                        vaccines. We see many positive words such as "wish", "health", "hope", "happiness" and "prosperity".</p>
+                     <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/Trump_pos_polar.PNG" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>Trump's most positive tweets include mentions of Justin Trudeau and a nod to the heroes of Medal
+                        of Honor Day. Trump uses positive words including "happy", "congratulations", "wonderful" and "welcome".</p>
+                    <p>Let's take another look at them showing the top 5 most negatively charged tweets by politician.
+                    </p>
+                    <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/Biden_neg_polar.PNG" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>Biden's tweets reflect a tough time in America especially around race relations. His tweets
+                        comment on Daunte Wright
+                        and also the Derek Chauvin murder trial - the police officer found guilty of murdering George Floyd.
+                        While
+                        these messages are called out as negative, the sentiment is clearly positive from Joe Biden. Negative words
+                        include "pain", "anger", "trauma", "murdering" and "guilty".
+                    </p>
+                    <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/Trump_neg_polar.PNG" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>Trump is concerned with FBI leaks and accuses former President Obama of wire tapping and McCarthyism. He promotes
+                        fear-mongering by the statement "we must keep evil out of our country" and the idea that vicious
+                        prisoners have been released by the Obama administration.</p>
+                    <!-- <p>Another way to classify text is to determine the objectivity or subjectivity of it.
                             If text is objective, it is considered factual and not someone's personal opinion. 
                             Subjective sentences generally refer to personal opinion, emotion, or judgment. </p>
                         <p>The following are the subjectivity scores for each president based on their respecive tweets.</p>
@@ -178,57 +224,76 @@
                         <p> As you can see in this histogram, Biden's tweets fall mostly below 0.6 and on the objective end 
                             of the spectrum. Trump, on the other hand is across the board with a large portion centered midway along 
                             the continuum of objectivity/subjectivity.</p> -->
-                            <!-- <p> The following are the most subjective tweets from each politician.</p>
+                    <!-- <p> The following are the most subjective tweets from each politician.</p>
                         <a href="#!"><img class="img-fluid" src="assets/img/Biden_objective.PNG" alt="..." /></a>
                         <p>Biden's tweets are mostly subjective and not a presentation of facts. </p>
                         <a href="#!"><img class="img-fluid" src="assets/img/Trump_objective.PNG" alt="..." /></a> -->
                     <h2 class="section-heading">Time Series Analysis</h2>
                     <p>Next we look explore trends over time. Below are visualizations of the temporal distributions
-                        of each politician's tweets.
-                    </p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/Biden_tweet_freq_.png" alt="..." /></a>
+                        of each politician's tweets.</p>
+                    <div class="zoom">
+                    <a href="#!"><img class="img-fluid" src="assets/img/Biden_tweet_freq_.png" alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over image to make larger)</span>
                     <!-- <span class="caption text-muted">To go places and do things that have never been done before –
                         that’s what living is all about.</span> -->
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year
-                        mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go
-                        where no man has gone before.</p>
+                    <p>Biden's Tweets over time were pretty consistent and averaged almost 2 tweets per day. The first and last days
+                        had significantly more tweets and this would make sense because it was inauguration day and the 100th day when he 
+                        probably tweeted progress on his commitments for the first 100 days.</p>
+                    <div class="zoom">
                         <a href="#!"><img class="img-fluid" src="assets/img/Trump_tweet_freq_.png" alt="..." /></a>
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a
-                        fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+                    </div><span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>Trumps tweets varied across the time period and he averaged over 5 tweets per day. Based on the frequency, polarity and 
+                        subjectivity of his tweets, its possible he tweets in a less informative and in a less official capacity. 
+                    </p>
                     <p>
                     <h2 class="section-heading">Time Series Sentiment Analysis</h2>
-                    <p> For the graphics below we categorized our polarity values into to sentiment classes (negative = -1 to -0.01, 
+                    <p> For the graphics below we categorized our polarity values into to sentiment classes (negative =
+                        -1 to -0.01,
                         neutral = -0.01 to 0.01, and positive = 0.01 to 1). </p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/Sentiment_value_counts.png" alt="..." /></a>    
-                    <p>More than half of Biden's tweets were positive and less than 15% were negative. More than half of Trumps were also positive, 
+                    <div class="zoom">
+                        <a href="#!"><img class="img-fluid" src="assets/img/Sentiment_value_counts.png" alt="..." /></a>
+                    </div><span class="caption text-muted">(Hover over image to make larger)</span>
+                    <p>More than half of Biden's tweets were positive and less than 15% were negative. More than half of
+                        Trumps were also positive,
                         but the remaining were pretty evenly split between negative (almost 24%) and neutral.
                     </p>
-                    <a href="#!"><img class="img-fluid" src="assets/img/Biden_sentimentValues_100.png" alt="..." /></a>    
-                    <a href="#!"><img class="img-fluid" src="assets/img/Trump_sentimentValues_100.png" alt="..." /></a>    
+                    <P>Plotly was used to create the graphs below. They show the average subjectivity and polarity scores for tweets aggregated by date for each
+                        president.
+                    </P>
+                    <div class="zoom">
+                        <a href="#!"><img class="img-fluid" src="assets/img/Biden_sentimentValues_100.png"
+                                alt="..." /></a></div>
+                                <div class="zoom"><a href="#!"><img class="img-fluid" src="assets/img/Trump_sentimentValues_100.png"
+                                alt="..." /></a></div>
+                    <span class="caption text-muted">(Hover over images to make larger)</span>
+                    <p> I wouldn't say a trend exists necessarily over time for either president in polarity or subjectivity. However it is obvious 
+                        that Biden appears more positive in his tweets overall when compared to Trump's and Trump has significantly more subjective 
+                        tweets especially early in his 100 day 
+                        period.
+                    </p>
                     <h2 class="section-heading">Word Cloud Visualizations</h2>
-                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the
-                        size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked
-                        so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart.
-                        Seeing this has to change a man.</p>
+                    <p>Lastly, we take a look at the frequency of words tweeted by generating word clouds using the Python library "Word Cloud".
+
+                    </p>
                     <a href="#!"><img class="img-fluid" src="assets/img/Biden_cloud_100.png" alt="..." /></a>
-                    <p></p>
+                    <p>The most frequently occuring words in Biden's tweets include "POTUS", "America(n)", "will", "rescue" and "WhiteHouse".</p>
                     <a href="#!"><img class="img-fluid" src="assets/img/Trump_cloud_100.png" alt="..." /></a>
-                    <!-- <span class="caption text-muted">To go places and do things that have never been done before –
+                                        <!-- <span class="caption text-muted">To go places and do things that have never been done before –
                         that’s what living is all about.</span> -->
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year
-                        mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go
-                        where no man has gone before.</p>
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a
-                        fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+                    <p>In Trump's cloud we see "great", "American", "will", "Fake news" and "Russia".</p>
+                    <p>That concludes the exploration of tweet sentiments of each President's first 100 days. I won't comment
+                        on which I felt was more postitive and subjective - you can draw your own conclusions on the data provided. <p>Please
+                        feel free to check out the notebooks I created for the analyses by clicking on the Github icon below!</p>
+                                            </p>
                     <p>
                         <!-- Placeholder text by
                             <a href="http://spaceipsum.com/">Space Ipsum</a> -->
-                        Header Image by
+                        Header Image of candidates by
                         <a
                             href="https://www.pennlive.com/news/2020/10/trump-shows-different-side-biden-gets-more-time-to-talk-neither-lands-knockout-pa-debate-analysts.html">Pennlive</a>
                     </p>
-                </div>
             </div>
+        </div>
         </div>
     </article>
     <!-- Footer-->
@@ -254,7 +319,7 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#!">
+                            <a href="https://github.com/LangsterGA/Sentiment100">
                                 <span class="fa-stack fa-lg">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>
