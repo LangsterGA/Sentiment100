@@ -6,5 +6,8 @@ This final project was an opportunity for me to explore a type of Natural Langua
 # Link to data sources:
 https://github.com/LangsterGA/Sentiment100/tree/main/sources
 
-# Link to notebooks and code
+# Link to notebooks and code:
 https://github.com/LangsterGA/Sentiment100/tree/main/notebooks
+
+# Link to Github Page of blog article: 
+https://langsterga.github.io/SentimentNLP/
