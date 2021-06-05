@@ -11,3 +11,6 @@ https://github.com/LangsterGA/Sentiment100/tree/main/notebooks
 
 # Link to Github Page of blog article: 
 https://langsterga.github.io/SentimentNLP/
+
+#Link to Heroku deployment:
+https://nlp-100.herokuapp.com/
